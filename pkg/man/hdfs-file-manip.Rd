@@ -62,5 +62,4 @@
   hdfs.put(hdfs.test, "/tmp")
   hdfs.ls("/tmp")
   ## moves hdfs-test to /tmp/hdfs-test1 (both on HDFS)
-  hdfs.move(file.path("/tmp", basename(hdfs.test)), hdfs.test.1)
-}
+  hdfs.move(file.path("/tmp", basename(hdfs.test)), file.path("/tmp", basename(hdfs.test.1)))}
