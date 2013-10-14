@@ -1,4 +1,4 @@
-\name{rhdfs-file-manip}
+\name{hdfs-file-manip}
 \alias{hdfs.copy}
 \alias{hdfs.cp}
 \alias{hdfs.move}

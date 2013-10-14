@@ -1,4 +1,4 @@
-\name{rhdfs-file-access}
+\name{hdfs-file-access}
 \alias{hdfs.file}
 \alias{hdfs.write}
 \alias{hdfs.close}

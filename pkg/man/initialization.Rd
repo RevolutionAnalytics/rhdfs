@@ -1,4 +1,4 @@
-\name{hdfs.init}
+\name{initialization}
 \alias{hdfs.init}
 \docType{package}
 

@@ -1,4 +1,4 @@
-\name{rhdfs-filelevel}
+\name{hdfs.file-level}
 \alias{hdfs.ls}
 \alias{hdfslist.files}
 \alias{hdfs.delete}

@@ -1,4 +1,4 @@
-\name{rhdfs-text-manip}
+\name{text.files}
 \alias{hdfs.line.reader}
 \alias{hdfs.read.text.file}
 \alias{hdfs.cat}

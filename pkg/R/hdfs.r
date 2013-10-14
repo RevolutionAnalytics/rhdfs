@@ -21,7 +21,11 @@ hdfs.init <- function(hadoop=NULL){
   hcp<-system(command, intern=TRUE)
   hcp_filelist<-""
   if (length(hcp) > 0) {
-		hcp<-strsplit(gsub("\\*","",hcp), ":")
+    if(.Platform$OS.type == "windows") {
+      hcp<-strsplit(gsub("\\*","",hcp), ";")
+    } else {
+      hcp<-strsplit(gsub("\\*","",hcp), ":")
+    }
 		hcp_filelist<-hcp[[1]]
   }
 
