@@ -183,8 +183,13 @@ hdfs.file <- function(path,mode="r",fs=hdfs.defaults("fs"),buffersize=5242880,ov
 hdfs.close <- function(con){
   fh <- con$fh
   if(con$mode=="w") {
-    fh$flush() ## change to hflush and hsync for 0.21
-    fh$sync()
+    tryCatch({
+      fh$flush()
+      fh$sync()},
+    error=function(e) {
+      fh$hflush()
+      fh$hsync()
+    })
   }
   fh$close()
   TRUE
