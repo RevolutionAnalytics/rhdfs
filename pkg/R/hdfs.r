@@ -74,7 +74,8 @@ hdfs.ls <- function(path, recurse=FALSE,cfg=hdfs.defaults("conf"),fs=hdfs.defaul
   f$size <- as.numeric(f$size)
   unique(f)
 }
-hdfslist.files <- hdfs.ls
+
+hdfs.list.files <- hdfs.ls
 
 hdfs.delete <- function(path, cfg=hdfs.defaults("conf"),fs=hdfs.defaults("fs")){
   v <- rhdfs:::.hdfsEnv[["fu"]]$delete(cfg,fs,.jarray(as.character(path)), TRUE)
