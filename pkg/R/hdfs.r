@@ -26,7 +26,7 @@ hdfs.init <- function(hadoop=NULL){
     } else {
       hcp<-strsplit(gsub("\\*","",hcp), ":")
     }
-		hcp_filelist<-hcp[[1]]
+		hcp_filelist<-hcp[length(hcp)]]
   }
 
   hadoop.CP <- c(hcp_filelist
