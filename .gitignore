@@ -29,3 +29,5 @@ graph.png
 .Rhistory
 .Rproj.user
 *.Rproj
+pkg/rhdfs.bin.Rcheck
+*.log

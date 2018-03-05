@@ -17,6 +17,12 @@ The basic project requirements are as follows:
 In order to compile the package, execute the command, `bazel build //...` and this 
 will build the R package and its Java dependency.
 
+## Publishing to CRAN
+
+1. Execute the command, `bazel build //..`.
+
+2. From the top level project directory, execute the command, `R CMD check --as-cran bazel-bin/pkg/rhdfs`
+
 ## Dependency Analysis
 
 In order to perform a dependency analysis of the project, you will need to meet an extra requirement of:
