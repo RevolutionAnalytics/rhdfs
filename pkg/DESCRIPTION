@@ -9,7 +9,7 @@ Depends:
     methods,
     rJava (>= 0.9-9)
 SystemRequirements: Java (>= 1.6)
-ByteCompile: TRUE
 Maintainer: Stewart Henderson <stewart.henderson@uptake.com>
 Description: Functions to browse, open, write files to the HDFS
 License: Apache License (== 2.0)
+RoxygenNote: 6.0.1.9000

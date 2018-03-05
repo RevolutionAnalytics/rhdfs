@@ -31,3 +31,4 @@ graph.png
 *.Rproj
 pkg/rhdfs.bin.Rcheck
 *.log
+pkg/..Rcheck
