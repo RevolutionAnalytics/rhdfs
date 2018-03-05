@@ -6,4 +6,3 @@ importFrom("rJava", "J")
 exportPattern("^hdfs")
 S3method("print", "hdfsFH")
 S3method("as.character", "hdfsFH")
-
