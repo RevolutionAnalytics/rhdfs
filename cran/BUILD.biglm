@@ -12,6 +12,6 @@ r_pkg(
     ),
     lazy_data = True,
     deps = [
-        "@R_DBI//:dbi",
+        "@R_DBI//:DBI",
     ],
 )
