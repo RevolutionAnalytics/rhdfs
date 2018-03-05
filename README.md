@@ -25,13 +25,13 @@ In order to perform a dependency analysis of the project, you will need to meet 
 
 Once the dependency is satisified, you can execute the following commands to create a depedency graph:
 
-    `bazel query 'deps(//pkg:rhdfs)' --output graph > graph.in`
+    bazel query 'deps(//pkg:rhdfs)' --output graph > graph.in
 
-    `dot -Tpng < graph.in > graph.png`
+    dot -Tpng < graph.in > graph.png
 
 This will yield a dependency graph similar to:
 
-![Dependencies](https://octodex.github.com/images/yaktocat.png)
+![Dependencies](https://github.com/bowlofstew/rhdfs/blob/feature/bazel-builds/docs/dependencies.png)
 
 ## Author(s)
 
