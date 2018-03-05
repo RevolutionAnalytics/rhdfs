@@ -31,7 +31,7 @@ Once the dependency is satisified, you can execute the following commands to cre
 
 This will yield a dependency graph similar to:
 
-![Dependencies](https://raw.githubusercontent.com/bowlofstew/rhdfs/feature/bazel-builds/docs/dependencies.png =250x250)
+![Dependencies](docs/dependencies.png)
 
 ## Author(s)
 
