@@ -29,10 +29,6 @@ Once the dependency is satisified, you can execute the following commands to cre
 
     dot -Tpng < graph.in > graph.png
 
-This will yield a dependency graph similar to:
-
-![Dependencies](docs/dependencies.png)
-
 ## Author(s)
 
 Stewart Henderson <stewart.henderson@uptake.com>
