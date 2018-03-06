@@ -77,6 +77,7 @@ hdfs.tell(con)
 \examples{
  ## Following example describes a way to lazy load a character of vector of 
  ## variables
+ library('rJava') # for J() function
  save.objects <- function(ob.names=ls(theenv), save.name, theenv=.GlobalEnv){
   hdfs.dircreate(save.name)
   data.file <- hdfs.file(path=sprintf("\%s/data",save.name),mode="w")
