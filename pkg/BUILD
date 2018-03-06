@@ -17,6 +17,7 @@ r_package(
         ), 
         pkg_deps = [
             "@R_rJava//:rJava",
+            "@R_biglm//:biglm",
         ],
         pkg_suggested_deps = [
             "//java/com/revolutionanalytics/hadoop/hdfs:rhdfs_lib"

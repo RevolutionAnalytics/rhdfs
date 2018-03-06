@@ -1,0 +1,17 @@
+# https://cran.r-project.org/web/packages/biglm/index.html
+
+load("@com_grail_rules_r//R:defs.bzl", "r_pkg")
+
+package(default_visibility = ["//visibility:public"])
+
+r_pkg(
+    name = "biglm",
+    srcs = glob(
+        ["**"],
+        exclude = [],
+    ),
+    lazy_data = True,
+    deps = [
+        "@R_DBI//:DBI",
+    ],
+)

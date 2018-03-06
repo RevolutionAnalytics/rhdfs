@@ -19,6 +19,8 @@ maven_jar(
 CRAN_BASE_URL="https://cloud.r-project.org/src/contrib"
 CRAN_PACKAGE="tar.gz"
 RJAVA_VERSION="0.9-9"
+DBI_VERSION="0.8"
+BIGLM_VERSION="0.9-1"
 
 new_http_archive(
     name = "R_rJava",
@@ -26,5 +28,23 @@ new_http_archive(
     strip_prefix = "rJava",
     urls = [
         "{}/rJava_{}.{}".format(CRAN_BASE_URL, RJAVA_VERSION, CRAN_PACKAGE)
+    ],
+)
+
+new_http_archive(
+    name = "R_DBI",
+    build_file = "cran/BUILD.DBI",
+    strip_prefix = "DBI",
+    urls = [
+        "{}/DBI_{}.{}".format(CRAN_BASE_URL, DBI_VERSION, CRAN_PACKAGE)
+    ],
+)
+
+new_http_archive(
+    name = "R_biglm",
+    build_file = "cran/BUILD.biglm",
+    strip_prefix = "biglm",
+    urls = [
+        "{}/biglm_{}.{}".format(CRAN_BASE_URL, BIGLM_VERSION, CRAN_PACKAGE)
     ],
 )

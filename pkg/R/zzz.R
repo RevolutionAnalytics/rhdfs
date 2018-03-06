@@ -21,9 +21,9 @@ library(utils)
   if (Sys.getenv("HADOOP_CMD") == "") {
     HADOOP_VERSION = "2.6.0"
     CLOUDERA_VERSION = "5.13.0"
-    CLOUDERA_HADOOP_INSTALLATION_DIR = paste("/opt/hadoop-", HADOOP_VERSION, "-cdh", CLOUDERA_VERSION)
+    CLOUDERA_HADOOP_INSTALLATION_DIR = sprintf("/opt/hadoop-%s-cdh%s", HADOOP_VERSION, CLOUDERA_VERSION)
     if (!dir.exists(CLOUDERA_HADOOP_INSTALLATION_DIR)) {
-      Sys.setenv(HADOOP_CMD = paste(CLOUDERA_HADOOP_INSTALLATION_DIR, "/bin/hadoop"))
+      Sys.setenv(HADOOP_CMD = sprintf("/opt/hadoop-%s-cdh%s/bin/hadoop", HADOOP_VERSION, CLOUDERA_VERSION))
     }
   } else {
     stop(sprintf("Environment variable HADOOP_CMD must be set before loading package %s", pkgname))
