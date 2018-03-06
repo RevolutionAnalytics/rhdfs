@@ -2,12 +2,13 @@ Package: rhdfs
 Type: Package
 Title: R and Hadoop Distributed Filesystem
 Version: 1.0.9
-Date: 2018-03-05
+Date: 2018-03-06
 Author: Revolution Analytics
 Depends: 
     R (>= 3.3.3),
-    methods,
-    rJava (>= 0.9-9)
+Imports:
+    rJava (>= 0.9),
+    methods
 SystemRequirements: Java (>= 1.6)
 Maintainer: Stewart Henderson <stewart.henderson@protonmail.com>
 Description: Functions to browse, open, write files to the HDFS
