@@ -25,10 +25,7 @@ library(utils)
     if (!dir.exists(CLOUDERA_HADOOP_INSTALLATION_DIR)) {
       Sys.setenv(HADOOP_CMD = sprintf("/opt/hadoop-%s-cdh%s/bin/hadoop", HADOOP_VERSION, CLOUDERA_VERSION))
     }
-  } else {
-    stop(sprintf("Environment variable HADOOP_CMD must be set before loading package %s", pkgname))
   }
   packageStartupMessage("\nHADOOP_CMD=", Sys.getenv("HADOOP_CMD"))
   packageStartupMessage("\nBe sure to run hdfs.init()")
-  #hdfs.init()
 }
