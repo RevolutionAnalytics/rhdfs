@@ -25,4 +25,3 @@ env:
   - HADOOP_CMD="/opt/hadoop-2.6.0-cdh5.13.0/bin/hadoop"
 script:
   - bazel build //...
-  - R CMD check --as-cran pkg/
