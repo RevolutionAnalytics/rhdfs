@@ -1,0 +1,27 @@
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - wget
+      - pkg-config
+
+before_install:
+  - wget https://github.com/bazelbuild/bazel/releases/download/0.11.0/bazel_0.11.0-linux-x86_64.deb
+  - sudo dpkg -i bazel_0.11.0-linux-x86_64.deb
+  - sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
+  - gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+  - gpg -a --export E084DAB9 | sudo apt-key add -
+  - wget http://archive.cloudera.com/cdh5/cdh/5/hadoop-2.6.0-cdh5.13.0.tar.gz
+  - sudo tar xvf hadoop-2.6.0-cdh5.13.0.tar.gz -C /opt
+  - sudo apt-get update
+  - sudo apt-get -y install r-base
+  - sudo R CMD javareconf
+  - sudo R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'
+  - sudo apt-get install -y texlive-base texlive-extra-utils texlive-latex-base texlive-latex-recommended texlive-generic-recommended
+env:
+  - HADOOP_CMD="/opt/hadoop-2.6.0-cdh5.13.0/bin/hadoop"
+script:
+  - bazel build //...

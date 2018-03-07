@@ -1,4 +1,21 @@
-rhdfs
-=====
+# rhdfs
 
-A package that allows R developers to use Hadoop HDFS, developed as part of the RHadoop project. Please see the [RHadoop wiki](https://github.com/RevolutionAnalytics/RHadoop/wiki) for information. 
+This repository provides an R package for interacting with Hadoop Distributed File System (HDFS).
+
+[![Build Status](https://travis-ci.org/bowlofstew/rhdfs.svg?branch=master)](https://github.com/bowlofstew/rhdfs)
+
+## Documentation
+
+[Requirements](docs/REQUIREMENTS.md)
+
+[Compilation](docs/COMPILATION.md)
+
+[CRAN](docs/CRAN.md)
+
+[Dependency Analysis](docs/DEPENDENCIES.md)
+
+[IntelliJ](docs/INTELLIJ.md)
+
+## Author(s)
+
+Stewart Henderson <stewart.henderson@protonmail.com>

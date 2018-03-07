@@ -66,7 +66,7 @@
 
   \code{hdfs.chown} and \code{hdfs.chmod} change the file permissions and owner
   and group membership of the file/directory. See
-  \url{http://hadoop.apache.org/common/docs/r0.20.2/hdfs_permissions_guide.html}
+  \url{https://hadoop.apache.org/docs/r1.2.1/hdfs_permissions_guide.html}
   for further details
 
   \code{hdfs.dircreate} creates a directory. \code{hdfs.mkdir} is a synonym

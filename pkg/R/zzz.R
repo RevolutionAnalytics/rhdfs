@@ -15,11 +15,17 @@
  
 library(utils)
 .hdfsEnv <- new.env()
-.onLoad <- function(libname,pkgname){
+.onLoad <- function(libname,pkgname) {
   vrs <- packageDescription(pkgname, lib.loc = libname, fields = "Version",
                             drop = TRUE)
-  if (Sys.getenv("HADOOP_CMD") == "") stop(sprintf("Environment variable HADOOP_CMD must be set before loading package %s", pkgname))
+  if (Sys.getenv("HADOOP_CMD") == "") {
+    HADOOP_VERSION = "2.6.0"
+    CLOUDERA_VERSION = "5.13.0"
+    CLOUDERA_HADOOP_INSTALLATION_DIR = sprintf("/opt/hadoop-%s-cdh%s", HADOOP_VERSION, CLOUDERA_VERSION)
+    if (!dir.exists(CLOUDERA_HADOOP_INSTALLATION_DIR)) {
+      Sys.setenv(HADOOP_CMD = sprintf("/opt/hadoop-%s-cdh%s/bin/hadoop", HADOOP_VERSION, CLOUDERA_VERSION))
+    }
+  }
   packageStartupMessage("\nHADOOP_CMD=", Sys.getenv("HADOOP_CMD"))
   packageStartupMessage("\nBe sure to run hdfs.init()")
-  #hdfs.init()
 }
