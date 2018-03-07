@@ -1,0 +1,6 @@
+directories:
+  .
+
+targets:
+  //java/com/revolutionanalytics/hadoop/hdfs:rhdfs_lib
+  //pkg:rhdfs
